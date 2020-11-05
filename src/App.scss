@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+body {
+  background: #091921;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+}
+/*#container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}*/
+.main-title {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.length-control {
+  width: 250px;
+}
+button {
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+span {
+  color: #ff6347;
+}
+.btn-level,
+.length-control {
+  display: inline-block;
+  .btn-level:nth-child(3) {
+    width: 40px;
+  }
+}
+.timer {
+  margin: 10px;
+  display: block;
+  border-radius: 50px;
+  position: relative;
+}
+.timer-wrapper {
+  font-size: 1.5em;
+  display: block;
+  position: relative;
+  background: #091921;
+}
+.clock {
+  margin: 20px auto;
+  width: 270px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(clock.png);
+  background-size: cover;
+  border-radius: 50%;
+  border: 4px solid #091921;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
+    inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+.clock:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1000;
+}
+.clock .min,
+.clock .sec {
+  position: absolute;
+}
+.clock .min,
+.mn {
+  width: 120px;
+  height: 120px;
+}
+.clock .sec,
+.sc {
+  width: 180px;
+  height: 180px;
+}
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+.mn::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 80px;
+  background: #ff6347;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+.sc::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: #fff;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+#time-left {
+  font-family: digital;
+  font-size: 40px;
+}
+.timer-control {
+  margin-top: 20px;
+}
+button:active {
+  color: #ff6347;
+}
+.footer button {
+  margin-top: 15px;
+  padding: 8px;
+  font-size: 1.1em;
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+.footer button:hover {
+  background-color: #ff6347;
+  font-weight: 200;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #ff6347, 0 0 40px #ff6347, 0 0 80px #ff6347;
+}
+
+@media screen and (max-width: 500px) {
+  #container {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
+}
